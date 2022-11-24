@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+    mongodb:
+        image: mongo:latest
+        container_name: sample-mongo
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=sample-usr
+            - MONGO_INITDB_ROOT_PASSWORD=sample-pwd
+            - MONGO_INITDB_DATABASE=sample
+        ports:
+            - 27017:27017
+    localstack:
+        container_name: 'sample-localstack'
+        image: localstack/localstack:latest
+        ports:
+            - '4566:4566'
+        environment:
+            - SERVICES=sns,sqs

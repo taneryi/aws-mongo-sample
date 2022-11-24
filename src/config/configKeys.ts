@@ -1,0 +1,6 @@
+export const CONFIG_KEYS = {
+  APP_HOST: 'APP_HOST',
+  APP_PORT: 'APP_PORT',
+  CORS_ORIGINS: 'CORS_ORIGINS',
+  MONGO_URI: 'MONGO_URI',
+};
